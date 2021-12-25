@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>merry Christmas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <style>
+        h1 {
+            font-size: 50px;
+        }
+
+        button {
+            font-size: 50px;
+            background-color: black;
+            border: none;
+            margin: 100px 0px;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            height: 600px;
+        }
+
+        body {
+            background-color: black;
+            opacity: 0.9;
+        }
+
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="clicked()">Tap me</button>
+        <h1 id="hello" onclick="clicked()"></h1>
+    </div>
+
+
+    <script>
+        function clicked() {
+            document.querySelector("h1").innerHTML = "Hello....";
+            setTimeout((clicked) => {
+                document.querySelector("h1").innerHTML = "1"
+            }, 1000);
+            setTimeout((clicked) => {
+                document.querySelector("h1").innerHTML = "2"
+            }, 2000);
+            setTimeout((clicked) => {
+                document.querySelector("h1").innerHTML = "3.."
+            }, 3000);
+            setTimeout((clicked) => {
+                document.querySelector("h1").style.fontSize = "100px"
+                document.querySelector("h1").style.fontFamily = "italic"
+                document.querySelector("h1").style.color = "red"
+                document.querySelector("h1").innerHTML = "Merry Christmas....."
+            }, 3800);
+        }
+    </script>
+</body>
+
+</html>
